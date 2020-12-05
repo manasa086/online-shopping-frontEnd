@@ -6,9 +6,17 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
+    "antd": "^4.8.5",
+    "axios": "^0.21.0",
+    "country-state-city": "^1.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.11.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-to-pdf": "0.0.13",
+    "reactstrap": "^8.7.1",
+    "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
