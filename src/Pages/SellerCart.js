@@ -30,7 +30,7 @@ function SellerCart() {
         formData.append('file', file, newFileName);
         console.log(file);
         console.log(data);
-        fetch("http://localhost:8080/uploadProducts",{
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/uploadProducts",{
             method:"POST",
             body:JSON.stringify(data),
             headers:{
@@ -51,7 +51,7 @@ function SellerCart() {
         const uploadFile = async ()=>
         {
             try{
-                const res=await axios.post('http://localhost:8080/upload',formData,{
+                const res=await axios.post('https://manasa-online-shopping-cart.herokuapp.com/upload',formData,{
                     headers:{
                         'Content-Type':'multipart/form-data'
                     }

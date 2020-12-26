@@ -10,7 +10,7 @@ const ChangeStatus = () => {
     let [userData,setUserData]=useState("");
     let [update,setUpdate]=useState(false)
     useEffect(()=>{
-        fetch("http://localhost:8080/getSellerDataById/"+id)
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/getSellerDataById/"+id)
         .then((res)=>res.json())
         .then((data)=>setUserData(data.message))
     },[])
@@ -20,7 +20,7 @@ const ChangeStatus = () => {
             let data={status:event.target.value,
                 token:localStorage.getItem("token"),
             id:id};
-            fetch("http://localhost:8080/changeSellerStatusById",{
+            fetch("https://manasa-online-shopping-cart.herokuapp.com/changeSellerStatusById",{
                 method:"PUT",
                 body:JSON.stringify(data),
                 headers:{

@@ -7,7 +7,7 @@ import Email from './Pages/Email';
 import Cart from './Pages/Cart';
 import Seller from './Pages/Seller';
 import SellerCart from './Pages/SellerCart';
-
+import Orders from "./Pages/Orders";
 import AdminContent from './Pages/AdminContent';
 import ChangeStatus from './Pages/ChangeStatus';
 import DetailsCart from "./Pages/DetailsCart"
@@ -15,8 +15,8 @@ import PDF from './Pages/PDF';
 import SellerPage from './Pages/SellerPage';
 import EditCart from './Pages/EditCart';
 import ForgotPassword from './Pages/ForgotPassword';
-
-
+import EditUserCart from './Pages/EditUserCart';
+import EditUserAddCart from './Pages/EditUserAddCart';
 function App() {
   return (
     <Switch>
@@ -32,7 +32,12 @@ function App() {
     <Route path={routes.sellercart}>
       <SellerCart/>
     </Route>
-  
+    <Route path={routes.editUserCart}>
+      <EditUserCart/>
+    </Route>
+    <Route path={routes.editUserAddCart}>
+      <EditUserAddCart/>
+    </Route>
     <Route path={routes.sellerPage}>
       <SellerPage></SellerPage>
     </Route>
@@ -56,6 +61,10 @@ function App() {
     </Route>
     <Route path={routes.editCart}>
       <EditCart></EditCart>
+    </Route>
+    <Route path={routes.orders}>
+      <Orders>
+      </Orders>
     </Route>
     <Route path="/">
       <Home className="app"></Home>

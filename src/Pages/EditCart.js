@@ -11,7 +11,7 @@ const EditCart = () => {
     const [uploadedFile,setUploadedFile]=useState(false);
     const [productUpload,setProductUpload]=useState(false);
     useEffect(()=>{
-        fetch("http://localhost:8080/getProductDetailsById/"+id)
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/getProductDetailsById/"+id)
         .then((res)=>res.json())
         .then((data)=>{
             setproductData(data.message)});
@@ -33,7 +33,7 @@ const EditCart = () => {
         // formData.append('file',file);
         // console.log(data);
         formData.append('file', file, newFileName);
-        fetch("http://localhost:8080/updateProductDetails",{
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/updateProductDetails",{
             method:"PUT",
             body:JSON.stringify(data),
             headers:{
@@ -50,7 +50,7 @@ const EditCart = () => {
         const uploadFile = async ()=>
         {
             try{
-                const res=await axios.post('http://localhost:8080/upload',formData,{
+                const res=await axios.post('https://manasa-online-shopping-cart.herokuapp.com/upload',formData,{
                     headers:{
                         'Content-Type':'multipart/form-data'
                     }

@@ -238,6 +238,44 @@
 
  
 }
+
+* {
+  box-sizing: border-box;
+}
+
+
+.column1 {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+
+.row1 {margin: 0 -5px;}
+
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
 h2{
   display: flex;
   justify-content: center;
@@ -245,9 +283,10 @@ h2{
   color:white;
   text-shadow:1px 1px lightgray;
   font-size: 53px!important; 
-  
 }
+
 .header {
+  width:102%!important;
   overflow: hidden;
   background-color:#505885;
   border-top:2px solid 505885;
@@ -277,8 +316,9 @@ h2{
   border: 2px solid #F3904F!important;
 }
 .items{
-    position: relative;
-    top:-5px;
+    margin-left:45%;
+    margin-right: 40%;
+    
     font-size: 20px!important;
     font-family: 'Courgette', cursive;
     background-color: white!important;
@@ -308,8 +348,58 @@ body{
   border-radius: 4px;
 }
 
+@media screen and (max-width:500px){
+  .cardLeft{
+    position: relative;
+    left:50px;
+  }
+  .logo{
+    position: relative;
+    top:20px;
+  }
+  .floatUp{
+    position: relative;
+    right:0px;
+    top:-20px;
+  }
+  .header{
+    position: relative;
+    top:-10px;
+    width:114%!important;
+  }
+}
+@media screen and (max-width:450px){
+  .header{
+    position: relative;
+    top:-10px;
+    width:115%!important;
+  }
 
+}
+@media screen and (max-width:420px){
+  .header{
+    position: relative;
+    top:-10px;
+    width:125%!important;
+  }
 
+}
+@media screen and (max-width:375px){
+  .header{
+    position: relative;
+    top:-10px;
+    width:155%!important;
+  }
+
+}
+@media screen and (max-width:300px){
+  .header{
+    position: relative;
+    top:-10px;
+    width:175%!important;
+  }
+
+}
 
 .header-right {
   float: right;
@@ -326,10 +416,19 @@ body{
     float: none;
   }
 }
+
+.cartDetails{
+  color:white!important;
+  font-size:50px!important;
+  position: relative;
+  top:10px;
+  text-shadow: 1px 1px lightgrey!important;
+}
 .headingTop
 {
   position: relative;
   top:-20px;
+  color:black!important;
 }
 .left
 {
@@ -471,8 +570,33 @@ body{
   background-color: rgba(242, 241, 239, 1);
   border:5px solid  rgba(242, 241, 239, 1);
   box-shadow: inset 5px 5px 20px 10px lightgrey;
-
- 
+}
+.viewCart{
+  position: relative;
+  top:7px;
+  left:-5px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Courgette', cursive;
+}
+.ordermsg{
+  display: flex;
+  position: relative;
+  top:170px;
+  font-size: 44px!important;
+  color:white;
+  justify-content: center;
+}
+h6{
+  font-size: 20px!important;
+  text-align: center;
+}
+.details{
+  font-size: 20px!important;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
 }
 .inline
 {

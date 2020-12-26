@@ -13,7 +13,7 @@ const AdminPage = () => {
     const onSubmit1=(data)=>{
       let email=data.name;
       data.name=data.name.toLowerCase();
-        fetch("http://localhost:8080/adminLogin",{
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/adminLogin",{
           method:"POST",
           body:JSON.stringify(data),
           headers:{

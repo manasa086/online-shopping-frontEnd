@@ -10,7 +10,7 @@ const SellerPage = () => {
 
     let [sellercartData,setsellerCartData]=useState([])
     useEffect(()=>{
-        fetch("http://localhost:8080/getProductDetailsBySellerEmail",{
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/getProductDetailsBySellerEmail",{
             method:"POST",
             body:JSON.stringify(data),
             headers:{

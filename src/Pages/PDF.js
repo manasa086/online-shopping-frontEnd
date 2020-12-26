@@ -11,17 +11,14 @@ const PDF = () => {
     const [cartData,setCartData]=useState("");
     const [shippingCost,setshippingCost]=useState(50)
     const [tax,setTax]=useState("");
-    const [total,setTotal]=useState("");
     const ref=useRef()
     useEffect(()=>{
-        fetch("http://localhost:8080/getCartDetailsById/"+id)
+        // console.log(id);
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/getCartDetailsById/"+id)
         .then((res)=>res.json())
         .then((data)=>{
             setCartData(data.message[0]);
             setTax((Number(data.message[0].productprice)*7)/100);
-            if(tax)
-                setTotal(shippingCost+Number(data.message[0].productprice)+tax);
-            console.log(total);
         })
     },[])
     const logOut=()=>{
@@ -29,7 +26,7 @@ const PDF = () => {
       localStorage.removeItem("usertoken");
       history.push(routes.home);
   }
-    if(cartData )
+    if(cartData)
     {
     return (
         <Fragment>
@@ -85,7 +82,7 @@ const PDF = () => {
           <td></td>
           <td></td>
           <td>Total</td>
-            <td>{total}</td>
+            <td>{shippingCost+Number(cartData.productprice)+tax}</td>
         </tr>
         <tr className="tr1"><td></td><td></td><td></td><td></td><td></td></tr>
       </tbody>

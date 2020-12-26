@@ -10,9 +10,12 @@ const routes={
     forgotPassword:"/ForgotPassword/:id",
     changeStatus:"/ChangeStatus/:id",
     editCart:"/EditCart/:id",
+    editUserCart:"/EditUserCart",
+    editUserAddCart:"/EditUserAddCart/:id",
     adminContent:"/AdminContent",
     detailsCart:"/DetailsCart",
-    pdf:"/PDF/:id"
+    pdf:"/PDF/:id",
+    orders:"/Orders"
     
 };
 export default routes;

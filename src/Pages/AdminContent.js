@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React,{Fragment,useEffect, useState} from 'react';
 import {useForm} from "react-hook-form";
 import {Row,Col,Button} from 'reactstrap';
 import TableContent from '../Components/TableContent';
@@ -17,7 +17,7 @@ const AdminContent = () => {
         setTableContent(true);
         // console.log(localStorage.getItem("status"))
         data.token=localStorage.getItem("token");
-        fetch("http://localhost:8080/sellerDetails",{
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/sellerDetails",{
             method:"POST",
             body:JSON.stringify(data),
             headers:{
@@ -67,6 +67,7 @@ const AdminContent = () => {
             </Row>
             </form>
             {getData.length>0?<TableContent getData={getData} ></TableContent>:null}
+            {tableContent && !(getData.length>0)?<Fragment><p></p><h6 className="details">Sorry, No User Details are available</h6></Fragment>:null}
         </div>
     );
 }

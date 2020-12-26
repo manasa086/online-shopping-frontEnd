@@ -3,12 +3,12 @@ import {useHistory} from "react-router-dom";
 import routes from "../routes";
 import { Card, Button, CardHeader, CardFooter, CardBody,
     CardTitle, CardText,CardImg,Col,Row, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-const DisplaySellerCart = (props) => {
+const DisplayUserCart = (props) => {
     let imageURL=`https://manasa-online-shopping-cart.herokuapp.com/:${props.content.imagename}`;
     let history=useHistory();
     const editItem=()=>{
         let id=Number(props.content.index);
-        history.push(routes.editCart.replace(":id",id));
+        history.push(routes.editUserAddCart.replace(":id",id));
         // history.push(routes.pdf.replace(":id",id));
     }
 
@@ -24,7 +24,7 @@ const DisplaySellerCart = (props) => {
               <CardImg src={imageURL}  alt="Card image cap" width="80px" height="120px" />
               <CardTitle tag="h6">{props.content.productname}</CardTitle>
                 <CardText className="cartText"><ul><li><b><i>Price</i>: <i>₹{props.content.productprice}</i></b></li>
-                <li><b><i>Quantity</i>: <i>{props.content.quantity}</i></b></li></ul>
+                <li><b><i>Quantity</i>: <i>{props.content.productquantity}</i></b></li></ul>
                 </CardText>
                 <CardText></CardText>
               </CardBody>
@@ -39,4 +39,4 @@ const DisplaySellerCart = (props) => {
     );
 }
 
-export default DisplaySellerCart;
+export default DisplayUserCart;

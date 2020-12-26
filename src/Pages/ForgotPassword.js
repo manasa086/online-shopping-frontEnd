@@ -24,7 +24,7 @@ const ForgotPassword = () => {
         }
         else
         {
-             fetch("http://localhost:8080/changePasswordofUser",{
+             fetch("https://manasa-online-shopping-cart.herokuapp.com/changePasswordofUser",{
                  method:"PUT",
                  body:JSON.stringify(data),
                  headers:{
@@ -48,7 +48,7 @@ const ForgotPassword = () => {
         }
         else
         {
-             fetch("http://localhost:8080/changePasswordofSeller",{
+             fetch("https://manasa-online-shopping-cart.herokuapp.com/changePasswordofSeller",{
                  method:"PUT",
                  body:JSON.stringify(data),
                  headers:{

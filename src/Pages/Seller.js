@@ -19,7 +19,7 @@ const Seller = () => {
     }
     const onSubmit=(data)=>{
         let email=data.email;
-        fetch("http://localhost:8080/sellerlogin",{
+        fetch("https://manasa-online-shopping-cart.herokuapp.com/sellerlogin",{
             method:"POST",
             body:JSON.stringify(data),
             headers: {
@@ -50,7 +50,7 @@ const Seller = () => {
         email:document.getElementById("email").value.toString()
        }
        localStorage.setItem("selleremail",document.getElementById("email").value.toString());
-       fetch("http://localhost:8080/forgotPasswordSeller",{
+       fetch("https://manasa-online-shopping-cart.herokuapp.com/forgotPasswordSeller",{
          method:"POST",
          body:JSON.stringify(data),
          headers:{
